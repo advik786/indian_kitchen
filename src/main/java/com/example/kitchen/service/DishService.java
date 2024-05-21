@@ -60,9 +60,13 @@ public class DishService {
         return dishDetailsDto;
     }
 
-    public JSONObject checkApi() {
-        JSONObject obj = new JSONObject();
-        obj.put("data","api integrated");
-        return obj;
+    public List<DishDetails> getDishDetailsByDishIds(String dishIds) {
+        try {
+            List<DishDetails> dishDetailsList = dishDao.getDishDetailsByDishIds(dishIds);
+            return dishDetailsList;
+        } catch (Exception e) {
+            logger.error("Error in getDishDetailsByDishIds(). ", e);
+        }
+        return null;
     }
 }

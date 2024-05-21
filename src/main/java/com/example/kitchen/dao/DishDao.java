@@ -13,4 +13,6 @@ public interface DishDao {
     DishDetails getDishById(int dishId);
 
     void save(DishDetails dishDetails);
+
+    List<DishDetails> getDishDetailsByDishIds(String dishIds);
 }

@@ -16,8 +16,8 @@ import java.util.Properties;
 @Configuration
 public class SpringBootConfig {
 
-    @Value("${spring.datasource.driver-class-name}")
-    private String driverClassName;
+//    @Value("${spring.datasource.driver-class-name}")
+//    private String driverClassName;
 
     @Value("${spring.datasource.url}")
     private String url;
